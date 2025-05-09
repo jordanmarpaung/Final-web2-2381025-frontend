@@ -1,0 +1,159 @@
+/* frontend/src/pages/HomePage.module.css */
+.homePage {
+  /* Tidak perlu styling khusus untuk container utama */
+}
+
+/* --- Hero Section --- */
+.heroSection {
+  position: relative; /* Untuk overlay */
+  background-image: url("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjAzNTV8MHwxfHNlYXJjaHwyfHxob3RlbCUyMHN1bnNldHxlbnwwfHx8fDE3MjMwNzIyMzl8MA&ixlib=rb-4.0.3&q=80&w=1080"); /* Ganti dengan URL gambar Anda */
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  min-height: 70vh; /* Tinggi minimal */
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  text-align: center;
+  padding: 60px 20px; /* Padding atas/bawah dan kiri/kanan */
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+  z-index: 1; /* Di bawah konten */
+}
+
+.heroContent {
+  position: relative; /* Agar di atas overlay */
+  z-index: 2;
+}
+
+.heroSection h1 {
+  font-size: 3.5rem; /* Lebih besar */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff; /* Pastikan warna kontras */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow untuk keterbacaan */
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  max-width: 650px; /* Batasi lebar subtitle */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Jarak antar tombol */
+  flex-wrap: wrap; /* Agar tombol responsif */
+}
+
+.heroActions .button.large {
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.welcomeMessage {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* --- Featured Hotels Section --- */
+.featuredHotelsSection {
+  padding: 50px 0;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: var(--text-color);
+  position: relative;
+}
+/* Garis bawah dekoratif */
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 8px auto 0;
+}
+
+.hotelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.noHotelsMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-gray-color);
+  padding: 30px 0;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+.noHotelsMessage .button {
+  margin-top: 15px;
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 40px;
+}
+.viewAllContainer .button {
+  padding: 10px 25px;
+  font-size: 1rem;
+}
+
+/* --- How It Works Section --- */
+.howItWorksSection {
+  background-color: #fff; /* Warna latar berbeda */
+  padding: 50px 0;
+  margin-top: 30px;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.step {
+  padding: 20px;
+}
+
+.stepIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: var(--dark-gray-color);
+}

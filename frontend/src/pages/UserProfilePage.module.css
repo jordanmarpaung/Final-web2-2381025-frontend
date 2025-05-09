@@ -1,0 +1,40 @@
+/* frontend/src/pages/UserProfilePage.module.css */
+.profilePage {
+  padding: 20px 0;
+  max-width: 700px; /* Batasi lebar halaman profil */
+  margin: 0 auto;
+}
+
+.profilePage h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profileCard,
+.passwordCard {
+  /* Menggunakan .card dari main.css */
+  margin-bottom: 25px;
+}
+
+.profileCard p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.profileCard strong {
+  min-width: 120px; /* Agar label sejajar */
+  display: inline-block;
+  color: #555;
+}
+
+.roleBadge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.9em;
+  text-transform: capitalize;
+}
+
+.passwordCard form {
+  margin-top: 15px;
+}

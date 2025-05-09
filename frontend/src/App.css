@@ -1,0 +1,10 @@
+/* frontend/src/App.css */
+/* .App {
+  text-align: center; // Hapus ini jika tidak ingin semua konten terpusat
+} */
+
+.app-content {
+  padding-top: 80px; /* Sesuaikan dengan tinggi Navbar Anda */
+  min-height: calc(100vh - 80px); /* Agar konten mengisi layar jika pendek */
+  padding-bottom: 20px; /* Beri sedikit ruang di bawah */
+}

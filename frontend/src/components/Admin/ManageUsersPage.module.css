@@ -1,0 +1,159 @@
+/* frontend/src/pages/Admin/ManageUsersPage.module.css */
+.manageUsersPage {
+  padding: 20px 0;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.actionMessage {
+  padding: 10px 15px;
+  margin: 0 auto 20px auto;
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 80%;
+}
+
+.editFormContainer {
+  margin-bottom: 30px;
+  border: 2px solid var(--primary-color); /* Highlight form edit */
+}
+.editFormContainer form {
+  padding-top: 15px; /* Padding dari card-body sudah ada */
+}
+
+.editTitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.editGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px 20px;
+}
+
+.editActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px solid var(--medium-gray-color);
+}
+
+.tableTitle {
+  font-size: 1.5rem;
+  margin-top: 20px; /* Jarak dari form atau pesan */
+  margin-bottom: 15px;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--medium-gray-color);
+}
+
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usersTable th,
+.usersTable td {
+  border-bottom: 1px solid var(--medium-gray-color);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.usersTable th {
+  background-color: var(--light-gray-color);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--dark-gray-color);
+}
+
+.usersTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.usersTable tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.editingRow {
+  background-color: #e9f7fd !important;
+  outline: 1px solid var(--primary-color);
+  outline-offset: -1px;
+}
+
+.roleBadge {
+  padding: 3px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #fff;
+  min-width: 50px; /* Agar lebar badge konsisten */
+  display: inline-block;
+  text-align: center;
+}
+.admin {
+  background-color: var(--danger-color);
+}
+.user {
+  background-color: var(--success-color);
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.actionButton {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editButton {
+  background-color: #e2f0ff;
+  border-color: #b8d9ff;
+  color: #004085;
+}
+.editButton:hover {
+  background-color: #cce5ff;
+}
+.editButton:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.deleteButton {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.deleteButton:hover {
+  background-color: #f5c6cb;
+}
+.deleteButton:disabled {
+  background-color: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #ddd;
+}

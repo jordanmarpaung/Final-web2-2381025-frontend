@@ -1,0 +1,33 @@
+// frontend/tsconfig.node.json (Perbaikan Lagi)
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "ES2022",
+    "lib": ["ES2023"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    // "allowImportingTsExtensions": true, // <-- HAPUS BARIS INI KARENA noEmit=false
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    // "noEmit": false, // Tidak perlu ditulis eksplisit jika sudah dihapus
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Opsi Emit yang mungkin diperlukan */
+    "declaration": true, // --> Aktifkan jika belum, diperlukan oleh composite
+    "declarationMap": true,
+    "sourceMap": true
+    // "outDir": "./dist-node" // Tentukan output dir jika perlu
+  },
+  "include": ["vite.config.ts"] // Pastikan path ini benar
+}

@@ -1,0 +1,69 @@
+/* frontend/src/components/Navbar.module.css */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-left: 20px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.userInfo {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.logoutButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,32 @@
+// frontend/tsconfig.json (Contoh relevan)
+{
+  "compilerOptions": {
+    // ...
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler", // Atau "nodeNext"
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Vite yang handle emit
+    "jsx": "react-jsx",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true, // Bantu deteksi TS6133
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    /* Tambahkan ini jika belum ada, atau sesuaikan dengan opsi Anda */
+    "verbatimModuleSyntax": true, // Atau "importsNotUsedAsValues": "error", "preserveValueImports": true
+    "esModuleInterop": true, // Biasanya diperlukan
+    // ...
+    "baseUrl": ".", // Opsional, untuk path alias jika pakai
+    "paths": {
+      "@/*": ["./src/*"] // Contoh path alias
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

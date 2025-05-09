@@ -1,0 +1,59 @@
+/* frontend/src/components/Admin/HotelForm.module.css */
+.hotelFormContainer {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin: 20px 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--medium-gray-color);
+}
+
+.hotelFormContainer h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.hotelForm {
+  display: grid; /* Gunakan grid untuk layout 2 kolom */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Kolom responsif */
+  gap: 20px 30px; /* Jarak baris dan kolom */
+  align-items: start; /* Agar kolom tidak stretch jika isinya beda tinggi */
+}
+
+/* Styling form-group, label, input sudah ada di main.css */
+.formColumn {
+  /* Tidak perlu styling khusus jika menggunakan grid */
+}
+
+.formColumn textarea {
+  min-height: 150px; /* Beri tinggi minimum untuk textarea */
+  resize: vertical; /* Izinkan resize vertikal */
+}
+
+.formError {
+  grid-column: 1 / -1; /* Agar error span full width */
+  text-align: center;
+  margin-bottom: 0; /* Kurangi margin bawah default */
+}
+
+.formActions {
+  grid-column: 1 / -1; /* Span full width */
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--medium-gray-color);
+}
+
+.formActions button {
+  min-width: 120px; /* Lebar minimum tombol */
+  padding: 10px 20px;
+}

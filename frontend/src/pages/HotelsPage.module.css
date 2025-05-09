@@ -1,0 +1,74 @@
+/* frontend/src/pages/HotelsPage.module.css */
+.hotelsPage {
+  padding: 20px 0; /* Padding atas bawah, container akan handle padding kiri kanan */
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.25rem; /* 36px */
+  color: var(--text-color);
+}
+
+.filterForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Agar filter responsif */
+  gap: 15px; /* Jarak antar grup filter */
+  align-items: flex-end; /* Agar tombol sejajar dengan input terakhir */
+}
+
+.filterGroup {
+  flex: 1 1 200px; /* Flex grow, shrink, basis (lebar minimum) */
+  display: flex;
+  flex-direction: column;
+}
+
+.filterGroup label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: var(--dark-gray-color);
+}
+
+.filterGroup input[type="text"],
+.filterGroup input[type="number"],
+.filterGroup select {
+  /* Styling sudah ada di main.css, bisa di-override jika perlu */
+  font-size: 0.95rem;
+}
+
+.filterActions {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end; /* Sejajarkan dengan input terakhir */
+  padding-bottom: 0.375rem; /* Agar sejajar dengan input yang punya padding internal */
+  flex-basis: auto; /* Jangan biarkan ini mengambil terlalu banyak ruang jika sudah di baris baru */
+}
+
+.filterActions button {
+  padding: 0.5rem 1rem; /* Sedikit lebih kecil */
+  font-size: 0.9rem;
+}
+
+.hotelGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Kolom responsif */
+  gap: 25px; /* Jarak antar hotel card */
+}
+
+.noHotelsMessage {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-gray-color);
+  padding: 30px 0;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}

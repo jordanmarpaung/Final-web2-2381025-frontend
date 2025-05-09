@@ -1,0 +1,46 @@
+/* frontend/src/components/BookingForm.module.css */
+.bookingFormContainer {
+  background-color: var(--light-gray-color, #f8f9fa);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-top: 20px;
+  border: 1px solid var(--medium-gray-color, #e9ecef);
+}
+
+.bookingForm {
+  /* Styling form umum dari main.css */
+}
+
+.dateGroup {
+  display: flex;
+  gap: 20px; /* Jarak antara input tanggal */
+  margin-bottom: 1.5rem; /* Lebih banyak spasi bawah */
+}
+
+.dateGroup > div {
+  flex: 1; /* Agar kedua input tanggal mengambil ruang yang sama */
+}
+
+.dateGroup label {
+  font-weight: 500;
+}
+
+.summary {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e9f7fd; /* Light blue background */
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.summary p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.bookingForm button[type="submit"] {
+  width: 100%;
+  padding: 12px; /* Tombol lebih besar */
+  font-size: 1.1rem;
+}

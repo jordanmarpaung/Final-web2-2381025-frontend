@@ -1,0 +1,122 @@
+/* frontend/src/pages/Admin/ManageHotelsPage.module.css */
+.manageHotelsPage {
+  padding: 20px 0;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.actionMessage {
+  padding: 10px 15px;
+  margin: 0 auto 20px auto; /* Tengah dan beri jarak bawah */
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 80%; /* Agar tidak terlalu lebar */
+}
+
+.addHotelButtonContainer {
+  text-align: right; /* Posisikan tombol di kanan */
+  margin-bottom: 20px;
+}
+.addHotelButtonContainer button span[role="img"] {
+  margin-right: 5px;
+}
+
+.tableTitle {
+  font-size: 1.5rem;
+  margin-top: 40px; /* Jarak dari form atau tombol add */
+  margin-bottom: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  display: inline-block; /* Agar border hanya sepanjang teks */
+}
+
+.tableContainer {
+  overflow-x: auto; /* Agar tabel bisa di-scroll horizontal di layar kecil */
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--medium-gray-color);
+}
+
+.hotelsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hotelsTable th,
+.hotelsTable td {
+  border-bottom: 1px solid var(--medium-gray-color);
+  padding: 12px 15px; /* Lebih banyak padding */
+  text-align: left;
+  vertical-align: middle;
+}
+
+.hotelsTable th {
+  background-color: var(--light-gray-color);
+  font-weight: 600; /* Lebih tebal */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dark-gray-color);
+}
+
+.hotelsTable tbody tr:last-child td {
+  border-bottom: none; /* Hapus border bawah di baris terakhir */
+}
+
+.hotelsTable tbody tr:hover {
+  background-color: #f8f9fa; /* Efek hover halus */
+}
+
+.editingRow {
+  background-color: #e9f7fd !important; /* Highlight baris yang sedang diedit */
+  outline: 2px solid var(--primary-color); /* Tambah outline */
+}
+
+.tableImage {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 3px;
+  vertical-align: middle; /* Agar sejajar dengan teks */
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px; /* Jarak antar tombol aksi */
+  justify-content: center; /* Pusatkan tombol */
+  min-width: 140px; /* Pastikan kolom aksi cukup lebar */
+}
+
+.actionButton {
+  padding: 4px 8px; /* Tombol lebih kecil */
+  font-size: 0.85rem;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.editButton {
+  background-color: #e2f0ff;
+  border-color: #b8d9ff;
+  color: #004085;
+}
+.editButton:hover {
+  background-color: #cce5ff;
+}
+
+.deleteButton {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+.deleteButton:hover {
+  background-color: #f5c6cb;
+}

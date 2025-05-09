@@ -1,0 +1,129 @@
+/* frontend/src/pages/MyBookingsPage.module.css */
+.myBookingsPage {
+  padding: 20px 0;
+}
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.25rem;
+}
+
+.actionMessage {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+/* success-message dan error-message sudah ada di main.css */
+
+.noBookings {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+.noBookings p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.bookingCard {
+  /* .card dari main.css sudah memberikan dasar yang baik */
+  /* Tidak perlu banyak styling spesifik di sini jika .card sudah cukup */
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 15px; /* Jarak antara gambar dan detail hotel */
+}
+
+.hotelImageSmall {
+  width: 120px; /* Lebar tetap */
+  height: 80px; /* Tinggi tetap */
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  flex-shrink: 0; /* Agar gambar tidak menyusut */
+}
+
+.hotelDetails {
+  flex-grow: 1;
+}
+
+.hotelName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.hotelName a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+.hotelName a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.hotelLocation {
+  font-size: 0.85rem;
+  color: var(--dark-gray-color);
+}
+
+.bookingInfo {
+  /* card-body dari main.css akan menangani padding */
+  font-size: 0.95rem;
+  flex-grow: 1; /* Dorong tombol ke bawah jika ada */
+}
+.bookingInfo p {
+  margin-bottom: 8px;
+}
+.bookingInfo p strong {
+  color: #555;
+}
+
+.statusBadge {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pending {
+  background-color: var(--warning-color);
+  color: #333;
+}
+.confirmed {
+  background-color: var(--success-color);
+}
+.cancelled {
+  background-color: var(--dark-gray-color);
+}
+
+.bookedOn {
+  font-size: 0.8rem;
+  color: var(--dark-gray-color);
+  margin-top: 10px;
+}
+
+.cardActions {
+  padding: 15px;
+  border-top: 1px solid var(--border-color);
+  text-align: right; /* Atau center, atau flex jika ada beberapa tombol */
+}
+.cardActions button {
+  /* Styling tombol dari main.css */
+}

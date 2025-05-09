@@ -1,0 +1,96 @@
+/* frontend/src/pages/Admin/ManageBookingsPage.module.css */
+.manageBookingsPage {
+  padding: 20px 0;
+}
+.pageTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.actionMessage {
+  /* ... styling sama seperti di ManageHotels/Users ... */
+}
+.filterForm {
+  /* ... styling sama seperti di HotelsPage ... */
+}
+.filterGroup {
+  /* ... styling sama seperti di HotelsPage ... */
+}
+.filterActions {
+  /* ... styling sama seperti di HotelsPage ... */
+}
+.tableTitle {
+  /* ... styling sama seperti di ManageHotels/Users ... */
+}
+.tableContainer {
+  /* ... styling sama seperti di ManageHotels/Users ... */
+}
+
+.bookingsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.9rem; /* Sedikit lebih kecil */
+}
+.bookingsTable th,
+.bookingsTable td {
+  border-bottom: 1px solid var(--medium-gray-color);
+  padding: 8px 10px; /* Padding lebih kecil */
+  text-align: left;
+  vertical-align: middle;
+}
+.bookingsTable th {
+  /* ... styling sama ... */
+}
+.bookingsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+.bookingsTable tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.statusBadge {
+  /* ... styling sama seperti di MyBookingsPage ... */
+}
+.pending {
+  background-color: var(--warning-color);
+  color: #333;
+}
+.confirmed {
+  background-color: var(--success-color);
+  color: white;
+}
+.cancelled {
+  background-color: var(--dark-gray-color);
+  color: white;
+}
+
+.actionSelectContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.statusSelect {
+  padding: 4px 6px; /* Select lebih kecil */
+  font-size: 0.85rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.miniLoader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
